@@ -1,0 +1,25 @@
+#include<stdio.h>
+void main()
+{
+  int a,b,i,flag,n;
+  printf("Enter the range a and b:");
+  scanf("%d%d",&a,&b);
+  n=a+1;
+  while(n>a && n<b)
+  {
+    flag=0;
+    for(i=2;i<=n/2;i++)
+    {
+        if(n%i==0)
+        {
+            flag=1;
+            break;
+        }
+    }
+    if(flag==0 && n>=2)
+    {
+        printf("%d\n",n);
+    }
+    n++;
+  }
+}
